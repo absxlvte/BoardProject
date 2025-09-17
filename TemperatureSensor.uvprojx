@@ -390,16 +390,6 @@
               <FilePath>.\main.c</FilePath>
             </File>
             <File>
-              <FileName>AD7714.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\AD7714.c</FilePath>
-            </File>
-            <File>
-              <FileName>AD7714.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\AD7714.h</FilePath>
-            </File>
-            <File>
               <FileName>TMP119.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\TMP119.c</FilePath>
@@ -428,6 +418,26 @@
               <FileName>M1601Z.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\M1601Z.h</FilePath>
+            </File>
+            <File>
+              <FileName>DAC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\DAC.c</FilePath>
+            </File>
+            <File>
+              <FileName>DAC.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\DAC.h</FilePath>
+            </File>
+            <File>
+              <FileName>AD7799.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\AD7799.c</FilePath>
+            </File>
+            <File>
+              <FileName>AD7799.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\AD7799.h</FilePath>
             </File>
           </Files>
         </Group>

@@ -1,8 +1,8 @@
 Dependencies for Project 'TemperatureSensor', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 6190000::V6.19::ARMCLANG
-F (.\main.c)(0x68B6C25D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I "../board project" -I ./RTE/Device/STM32F407VGTx -I ./tmp117-I./RTE/Device/STM32F407VGTx-I./RTE/_Target_1-IC:/keil_pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-IC:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_  -include "Pre_Include_Global.h"-o ./objects/main.o -MD)
+F (.\main.c)(0x68CAB4AC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I "../board project" -I ./RTE/Device/STM32F407VGTx -I ./tmp117-I./RTE/Device/STM32F407VGTx-I./RTE/_Target_1-IC:/keil_pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-IC:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_  -include "Pre_Include_Global.h"-o ./objects/main.o -MD)
 I (RTE\_Target_1\Pre_Include_Global.h)(0x67F2A4F2)
-I (..\board project\AD7714.h)(0x68344F52)
+I (..\board project\AD7799.h)(0x68CAB527)
 I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x6374903A)
 I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h)(0x6374903A)
 I (C:\keil_pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
@@ -42,49 +42,6 @@ I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32
 I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x63749076)
 I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x63749076)
 I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x63749076)
-F (.\AD7714.c)(0x68B6D57E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I "../board project" -I ./RTE/Device/STM32F407VGTx -I ./tmp117-I./RTE/Device/STM32F407VGTx-I./RTE/_Target_1-IC:/keil_pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-IC:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_  -include "Pre_Include_Global.h"-o ./objects/ad7714.o -MD)
-I (RTE\_Target_1\Pre_Include_Global.h)(0x67F2A4F2)
-I (..\board project\AD7714.h)(0x68344F52)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x6374903A)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h)(0x6374903A)
-I (C:\keil_pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63888F58)
-I (C:\keil_pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
-I (C:\keil_pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
-I (C:\keil_pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
-I (C:\keil_pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F912E)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x6374903A)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x63749076)
-I (RTE\Device\STM32F407VGTx\stm32f4xx_hal_conf.h)(0x63775F9E)
-I (RTE\_Target_1\RTE_Components.h)(0x67F2A4F2)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h)(0x63775F9E)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x63749076)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63888F58)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_exti.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_adc.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc_ex.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dac.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dac_ex.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2c.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2c_ex.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x63749076)
-I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x63749076)
-F (.\AD7714.h)(0x68344F52)()
 F (.\TMP119.c)(0x6830444A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I "../board project" -I ./RTE/Device/STM32F407VGTx -I ./tmp117-I./RTE/Device/STM32F407VGTx-I./RTE/_Target_1-IC:/keil_pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-IC:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_  -include "Pre_Include_Global.h"-o ./objects/tmp119.o -MD)
 I (RTE\_Target_1\Pre_Include_Global.h)(0x67F2A4F2)
 I (..\board project\TMP119.h)(0x68344596)
@@ -215,6 +172,92 @@ I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32
 I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x63749076)
 I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x63749076)
 F (.\M1601Z.h)(0x6834316C)()
+F (.\DAC.c)(0x67E52C76)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I "../board project" -I ./RTE/Device/STM32F407VGTx -I ./tmp117-I./RTE/Device/STM32F407VGTx-I./RTE/_Target_1-IC:/keil_pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-IC:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_  -include "Pre_Include_Global.h"-o ./objects/dac.o -MD)
+I (RTE\_Target_1\Pre_Include_Global.h)(0x67F2A4F2)
+I (..\board project\DAC.h)(0x67E52B26)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x6374903A)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h)(0x6374903A)
+I (C:\keil_pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63888F58)
+I (C:\keil_pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\keil_pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\keil_pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\keil_pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F912E)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x6374903A)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x63749076)
+I (RTE\Device\STM32F407VGTx\stm32f4xx_hal_conf.h)(0x63775F9E)
+I (RTE\_Target_1\RTE_Components.h)(0x67F2A4F2)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h)(0x63775F9E)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x63749076)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63888F58)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_exti.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_adc.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc_ex.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dac.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dac_ex.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2c.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2c_ex.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x63749076)
+F (.\DAC.h)(0x67E52B26)()
+F (.\AD7799.c)(0x68CAB526)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I "../board project" -I ./RTE/Device/STM32F407VGTx -I ./tmp117-I./RTE/Device/STM32F407VGTx-I./RTE/_Target_1-IC:/keil_pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-IC:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_  -include "Pre_Include_Global.h"-o ./objects/ad7799.o -MD)
+I (RTE\_Target_1\Pre_Include_Global.h)(0x67F2A4F2)
+I (..\board project\AD7799.h)(0x68CAB527)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x6374903A)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h)(0x6374903A)
+I (C:\keil_pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F912E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63888F58)
+I (C:\keil_pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F912E)
+I (C:\keil_pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F912E)
+I (C:\keil_pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F912E)
+I (C:\keil_pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F912E)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x6374903A)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x63749076)
+I (RTE\Device\STM32F407VGTx\stm32f4xx_hal_conf.h)(0x63775F9E)
+I (RTE\_Target_1\RTE_Components.h)(0x67F2A4F2)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h)(0x63775F9E)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x63749076)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63888F58)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_exti.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_adc.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc_ex.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dac.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dac_ex.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2c.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2c_ex.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x63749076)
+I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x63749076)
+F (.\AD7799.h)(0x68CAB527)()
 F (C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c)(0x63749076)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I "../board project" -I ./RTE/Device/STM32F407VGTx -I ./tmp117-I./RTE/Device/STM32F407VGTx-I./RTE/_Target_1-IC:/keil_pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-IC:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_  -include "Pre_Include_Global.h"-o ./objects/stm32f4xx_hal.o -MD)
 I (RTE\_Target_1\Pre_Include_Global.h)(0x67F2A4F2)
 I (C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x63749076)

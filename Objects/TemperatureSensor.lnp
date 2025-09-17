@@ -1,9 +1,10 @@
 --cpu=Cortex-M4.fp.sp
 ".\objects\main.o"
-".\objects\ad7714.o"
 ".\objects\tmp119.o"
 ".\objects\onewire.o"
 ".\objects\m1601z.o"
+".\objects\dac.o"
+".\objects\ad7799.o"
 ".\objects\stm32f4xx_hal.o"
 ".\objects\stm32f4xx_hal_adc.o"
 ".\objects\stm32f4xx_hal_adc_ex.o"

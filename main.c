@@ -1,44 +1,22 @@
-#include "AD7714.h"
-//#include "TMP119.h"
-//#include "M1601Z.h"
-//#include "OneWire.h"
+#include "AD7799.h"
+
 void SystemClock_Config(void);
 void SysTick_Handler(void);
 
 int main(void){
 	HAL_Init();
 	SystemClock_Config();
-	//UartInit();
-	//I2C_Init();
-	//TMP119_Init();
-	//id = TMP119_ReadDeviceID(); //0x2117
-	//res = TMP119_ReadTemperature();
-//	uint8_t data=0;
-//	SPI_Init();
-//	AD_Init();
-//	AD_ReadRegister(MFilter,AIN3_AIN4,&data,1);
-	//uint32_t value = AD_ReadData(AIN1_AIN2);
-  SPI_Init();
-	uint8_t filter_high_conf = 0x27; 											//0b 0 010 0 111
-	uint8_t filter_high_val = 0x4F;  											//0b 0 100 1 111
-	HAL_SPI_Transmit(&xSPI, &filter_high_conf, 1, 200);
-	HAL_SPI_Transmit(&xSPI, &filter_high_val, 1, 200);
-	uint8_t filter_low_conf = 0x37; 											//0b 0 011 0 111
-	uint8_t filter_low_val = 0xA0; 												//0b 1 010 0 000
-	HAL_SPI_Transmit(&xSPI, &filter_low_conf, 1, 200);
-	HAL_SPI_Transmit(&xSPI, &filter_low_val, 1, 200);
-	uint8_t mode_conf = 0x17; 														//0b 0 001 0 111
-	uint8_t mode_val = 0x20; 															//0b 0 010 0 000
-	HAL_SPI_Transmit(&xSPI, &mode_conf, 1, 200);
-	HAL_SPI_Transmit(&xSPI, &mode_val, 1, 200);
-	uint8_t read_conf = 0x5F; 														//0b 0 101 1 111
-	uint16_t buffer = 0;
+	SPI_Init();
+	uint8_t xData = 0x60;
+	uint8_t xIDx = 0;
+	HAL_Delay(1);
+	HAL_SPI_TransmitReceive(&xSPI, &xData, &xIDx, 1, 300);
+	//HAL_SPI_Transmit_IT(&xSPI,&xData,1);
+	
+	//HAL_SPI_Transmit(&xSPI,&xData,1,100);
+	//HAL_SPI_Receive(&xSPI,&xID,1,100);
 	while(1){
-		if (HAL_GPIO_ReadPin(GPIOA, AD_DRDY) == GPIO_PIN_RESET){
-			HAL_SPI_Transmit(&xSPI, &read_conf, 1, 200);
-			HAL_SPI_Receive(&xSPI, &read_conf, 1, 200); //how many bytes read>?
-		}
-		
+
 	}
 }
 

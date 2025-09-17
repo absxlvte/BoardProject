@@ -1,4 +1,4 @@
-./objects/main.o: main.c RTE\_Target_1\Pre_Include_Global.h \
+./objects/ad7799.o: AD7799.c RTE\_Target_1\Pre_Include_Global.h \
   ..\board\ project\AD7799.h \
   C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h \
   C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h \
