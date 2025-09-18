@@ -5,11 +5,11 @@
 <h2>Tool Versions:</h2>
 IDE-Version: µVision V5.38.0.0
 Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: ngfjhgh hgjkhg, jhytiu, LIC=----
+License Information: Anton Zotin, MIET, LIC=----
  
 Tool Versions:
 Toolchain:       MDK-Lite  Version: 5.38.0.0
-Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+Toolchain Path:  Z:\keil\ARM\ARMCLANG\Bin
 C Compiler:      ArmClang.exe V6.19
 Assembler:       Armasm.exe V6.19
 Linker/Locator:  ArmLink.exe V6.19
@@ -21,81 +21,86 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
 Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
-C:\Users\Zotin\Desktop\work\_Current tasks\Temperature sensor\board project\TemperatureSensor.uvprojx
-Project File Date:  09/17/2025
+Z:\Work\_Current tasks\Temperature sensor\BoardProject\TemperatureSensor.uvprojx
+Project File Date:  09/18/2025
 
 <h2>Output:</h2>
-*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+*** Using Compiler 'V6.19', folder: 'Z:\keil\ARM\ARMCLANG\Bin'
 Build target 'Target 1'
-AD7799.c(1): warning: In file included from...
-../board project/AD7799.h(3): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(287): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(29): warning: In file included from...
+main.c(1): warning: In file included from...
+./AD7799.h(3): warning: In file included from...
+Z:/keil/packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(287): warning: In file included from...
+Z:/keil/packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(29): warning: In file included from...
 ./RTE/Device/STM32F407VGTx\stm32f4xx_hal_conf.h(405): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_adc.h(31): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h(4018): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+Z:/keil/packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_adc.h(31): warning: In file included from...
+Z:/keil/packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h(4018): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
   return (uint16_t)(READ_BIT(ADCx->DR, ADC_DR_DATA));
   ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h(4033): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+Z:/keil/packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h(4033): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
   return (uint16_t)(READ_BIT(ADCx->DR, ADC_DR_DATA));
   ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-AD7799.c(1): warning: In file included from...
-../board project/AD7799.h(3): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(287): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(29): warning: In file included from...
-./RTE/Device/STM32F407VGTx\stm32f4xx_hal_conf.h(509): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_spi.h(134): warning: padding struct 'struct __SPI_HandleTypeDef' with 2 bytes to align 'ErrorCode' [-Wpadded]
-  __IO uint32_t              ErrorCode;      /*!< SPI Error code                           */
-                             ^
-AD7799.c(41): warning: no newline at end of file [-Wnewline-eof]
-//}
-   ^
-AD7799.c(1): warning: In file included from...
-../board project/AD7799.h(3): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(287): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(29): warning: In file included from...
-./RTE/Device/STM32F407VGTx\stm32f4xx_hal_conf.h(397): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(148): warning: padding struct 'struct __DMA_HandleTypeDef' with 2 bytes to align 'Parent' [-Wpadded]
-  void                       *Parent;                                                          /*!< Parent object state                    */ 
-                              ^
-5 warnings generated.
-compiling AD7799.c...
-main.c(1): warning: In file included from...
-../board project/AD7799.h(3): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(287): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(29): warning: In file included from...
-./RTE/Device/STM32F407VGTx\stm32f4xx_hal_conf.h(405): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_adc.h(31): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h(4018): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
-  return (uint16_t)(READ_BIT(ADCx->DR, ADC_DR_DATA));
-  ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h(4033): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
-  return (uint16_t)(READ_BIT(ADCx->DR, ADC_DR_DATA));
-  ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-main.c(1): warning: In file included from...
-../board project/AD7799.h(3): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(287): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(29): warning: In file included from...
-./RTE/Device/STM32F407VGTx\stm32f4xx_hal_conf.h(509): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_spi.h(134): warning: padding struct 'struct __SPI_HandleTypeDef' with 2 bytes to align 'ErrorCode' [-Wpadded]
-  __IO uint32_t              ErrorCode;      /*!< SPI Error code                           */
-                             ^
-main.c(10): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
-        uint8_t xData = 0x60;
-                ^
-main.c(1): warning: In file included from...
-../board project/AD7799.h(3): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(287): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(29): warning: In file included from...
-./RTE/Device/STM32F407VGTx\stm32f4xx_hal_conf.h(397): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(148): warning: padding struct 'struct __DMA_HandleTypeDef' with 2 bytes to align 'Parent' [-Wpadded]
-  void                       *Parent;                                                          /*!< Parent object state                    */ 
-                              ^
-5 warnings generated.
+2 warnings generated.
 compiling main.c...
+AD7799.c(1): warning: In file included from...
+./AD7799.h(3): warning: In file included from...
+Z:/keil/packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(287): warning: In file included from...
+Z:/keil/packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(29): warning: In file included from...
+./RTE/Device/STM32F407VGTx\stm32f4xx_hal_conf.h(405): warning: In file included from...
+Z:/keil/packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_adc.h(31): warning: In file included from...
+Z:/keil/packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h(4018): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  return (uint16_t)(READ_BIT(ADCx->DR, ADC_DR_DATA));
+  ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Z:/keil/packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h(4033): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  return (uint16_t)(READ_BIT(ADCx->DR, ADC_DR_DATA));
+  ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AD7799.c(1): warning: In file included from...
+./AD7799.h(3): warning: In file included from...
+Z:/keil/packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(287): warning: In file included from...
+Z:/keil/packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(29): warning: In file included from...
+./RTE/Device/STM32F407VGTx\stm32f4xx_hal_conf.h(509): warning: In file included from...
+Z:/keil/packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_spi.h(134): warning: padding struct 'struct __SPI_HandleTypeDef' with 2 bytes to align 'ErrorCode' [-Wpadded]
+  __IO uint32_t              ErrorCode;      /*!< SPI Error code                           */
+                             ^
+AD7799.c(1): warning: In file included from...
+./AD7799.h(3): warning: In file included from...
+Z:/keil/packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(287): warning: In file included from...
+Z:/keil/packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(29): warning: In file included from...
+./RTE/Device/STM32F407VGTx\stm32f4xx_hal_conf.h(397): warning: In file included from...
+Z:/keil/packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(148): warning: padding struct 'struct __DMA_HandleTypeDef' with 2 bytes to align 'Parent' [-Wpadded]
+  void                       *Parent;                                                          /*!< Parent object state                    */ 
+                              ^
+AD7799.c(34): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+    uint8_t id = AD7799_ReadRegister(AD7799_REG_ID, 1);
+            ~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AD7799.c(31): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+    uint8_t reset_cmd[4] = {0xFF, 0xFF, 0xFF, 0xFF};
+            ^
+AD7799.c(40): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+    tx_data[0] = (0 << 7) | (0 << 6) | ((reg & 0x7) << 3);
+               ~ ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+AD7799.c(51): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+    tx_data[0] = (0 << 7) | (1 << 6) | ((reg & 0x7) << 3);
+               ~ ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+AD7799.c(55): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+    uint32_t result = 0;
+             ^
+AD7799.c(64): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+    uint16_t config = (1 << 4) | (gain << 8) | (channel & 0x7);
+             ~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+AD7799.c(66): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+    uint16_t mode = (AD7799_MODE_CONT << 13) | (AD7799_RATE_16_7HZ << 0);
+             ^
+AD7799.c(71): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int32_t' (aka 'int') [-Wsign-conversion]
+    return AD7799_ReadRegister(AD7799_REG_DATA, 3);
+    ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AD7799.c(72): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+13 warnings generated.
+compiling AD7799.c...
 linking...
-Program Size: Code=7194 RO-data=442 RW-data=12 ZI-data=1728  
-".\Objects\TemperatureSensor.axf" - 0 Error(s), 10 Warning(s).
+Program Size: Code=5514 RO-data=442 RW-data=12 ZI-data=1728  
+".\Objects\TemperatureSensor.axf" - 0 Error(s), 15 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -129,9 +134,9 @@ Package Vendor: Keil
 <h2>Collection of Component include folders:</h2>
   ./RTE/Device/STM32F407VGTx
   ./RTE/_Target_1
-  C:/keil_pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include
-  C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include
-  C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc
+  Z:/keil/packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  Z:/keil/packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+  Z:/keil/packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc
 
 <h2>Collection of Component Files used:</h2>
 
@@ -140,34 +145,34 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.6.0
 
    * Component: Keil::Device:STM32Cube Framework:Classic:1.8.1
-      Include file:  CMSIS/Driver/Config/RTE_Device.h
       Include file:  MDK/Templates/Inc/stm32f4xx_hal_conf.h
       Source file:   MDK/Templates/Src/stm32f4xx_hal_msp.c
       Include file:  MDK/Templates/Inc/stm32f4xx_it.h
-      Source file:   MDK/Templates/Src/stm32f4xx_it.c
       Include file:  MDK/Templates/Inc/main.h
       Source file:   MDK/Templates/Src/main.c
       Include file:  MDK/Templates_LL/Inc/main.h
+      Source file:   MDK/Templates/Src/stm32f4xx_it.c
+      Include file:  CMSIS/Driver/Config/RTE_Device.h
       Source file:   MDK/Templates_LL/Src/main.c
 
    * Component: Keil::Device:STM32Cube HAL:ADC:1.8.1
-      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c
 
    * Component: Keil::Device:STM32Cube HAL:Common:1.8.1
-      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
       Include file:  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
 
    * Component: Keil::Device:STM32Cube HAL:Cortex:1.8.1
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
 
    * Component: Keil::Device:STM32Cube HAL:DAC:1.8.1
-      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dac_ex.c
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dac.c
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dac_ex.c
 
    * Component: Keil::Device:STM32Cube HAL:DMA:1.8.1
-      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
 
    * Component: Keil::Device:STM32Cube HAL:EXTI:1.8.1
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
@@ -183,25 +188,25 @@ Package Vendor: Keil
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
 
    * Component: Keil::Device:STM32Cube HAL:RCC:1.8.1
-      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
 
    * Component: Keil::Device:STM32Cube HAL:SPI:1.8.1
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c
 
    * Component: Keil::Device:STM32Cube HAL:TIM:1.8.1
-      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
 
    * Component: Keil::Device:STM32Cube HAL:UART:1.8.1
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c
 
    * Component: Keil::Device:Startup:2.6.3
       Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
-      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Source file:   MDK/Device/Source/ARM/STM32F40xxx_41xxx_OPT.s
       Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
       Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s
-      Source file:   MDK/Device/Source/ARM/STM32F40xxx_41xxx_OPT.s
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
 Build Time Elapsed:  00:00:01
 </pre>
 </body>

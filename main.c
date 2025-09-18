@@ -7,14 +7,8 @@ int main(void){
 	HAL_Init();
 	SystemClock_Config();
 	SPI_Init();
-	uint8_t xData = 0x60;
-	uint8_t xIDx = 0;
-	HAL_Delay(1);
-	HAL_SPI_TransmitReceive(&xSPI, &xData, &xIDx, 1, 300);
-	//HAL_SPI_Transmit_IT(&xSPI,&xData,1);
-	
-	//HAL_SPI_Transmit(&xSPI,&xData,1,100);
-	//HAL_SPI_Receive(&xSPI,&xID,1,100);
+	uint8_t ID = 0;
+	ID = AD7799_Init();
 	while(1){
 
 	}
