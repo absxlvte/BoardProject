@@ -8,10 +8,12 @@ int main(void){
 	SystemClock_Config();
 	SPI_Init();
 	uint8_t ID = 0;
+	uint16_t q = 0;
 	ID = AD7799_Init();
 	while(1){
 		ID = AD7799_Init();  
-		HAL_Delay(1000);
+		//HAL_Delay(1000);
+		q++;
 	}
 }
 

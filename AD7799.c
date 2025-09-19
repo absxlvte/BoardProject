@@ -33,12 +33,13 @@ uint8_t AD7799_Init(void) {
     //HAL_SPI_Transmit(&xSPI, reset_cmd, 4, 100);
     //HAL_Delay(1);
     uint8_t id = AD7799_ReadRegister(AD7799_REG_ID, 1);
+		//uint8_t id = AD7799_ReadRegister(AD7799_REG_STATUS, 1);
     return id;
 }
 
 HAL_StatusTypeDef AD7799_WriteRegister(uint8_t reg, uint16_t value) {
     uint8_t tx_data[3];
-    tx_data[0] = (0 << 7) | (0 << 6) | ((reg & 0x7) << 3);
+    tx_data[0] = (0 << 7) | (1 << 6) | ((reg & 0x7) << 3);
     tx_data[1] = value >> 8;
     tx_data[2] = value & 0xFF;
     
@@ -51,8 +52,12 @@ uint32_t AD7799_ReadRegister(uint8_t reg, uint8_t size) {
     
     tx_data[0] = (0 << 7) | (1 << 6) | ((reg & 0x7) << 3);
     
-    HAL_SPI_TransmitReceive(&xSPI, tx_data, rx_data, size + 1, 100);
+    HAL_SPI_TransmitReceive(&xSPI, tx_data, rx_data, size+1, 100);
     
+//		HAL_SPI_Transmit(&xSPI, tx_data, size, 100);
+//		HAL_Delay(10);
+//		HAL_SPI_Transmit(&xSPI, rx_data, size, 100);
+		
     uint32_t result = 0;
     for(int i = 0; i < size; i++) {
         result = (result << 8) | rx_data[i + 1];
