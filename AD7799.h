@@ -4,7 +4,7 @@
 #include "stm32f4xx_hal.h"
 
 #define AD_SCLK GPIO_PIN_13 //PB13
-#define AD_DIN GPIO_PIN_15 //PB15
+#define AD_DIN  GPIO_PIN_15 //PB15
 #define AD_DOUT GPIO_PIN_14 //PB14
 //registers
 #define AD7799_REG_COMM        0x00
@@ -55,9 +55,9 @@ uint8_t AD7799_Init(void);
 HAL_StatusTypeDef AD7799_WriteRegister(uint8_t reg, uint16_t value);
 uint32_t AD7799_ReadRegister(uint8_t reg, uint8_t size);
 HAL_StatusTypeDef AD7799_SetChannel(uint8_t channel, uint8_t gain);
-int32_t AD7799_ReadData(void);
+uint32_t AD7799_ReadData(void);
 
-
+  
 extern SPI_HandleTypeDef xSPI;
 extern uint8_t xID;
 

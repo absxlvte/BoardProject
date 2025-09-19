@@ -153,12 +153,7 @@
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
-          <ItemText>xID</ItemText>
-        </Ww>
-        <Ww>
-          <count>1</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>xIDx,0x0A</ItemText>
+          <ItemText>ID,0x0A</ItemText>
         </Ww>
       </WatchWindow1>
       <WatchWindow2>

@@ -18,8 +18,9 @@ void SPI_Init(void){
 	xSPI.Init.DataSize=SPI_DATASIZE_8BIT;
 	xSPI.Init.CLKPolarity=SPI_POLARITY_LOW;	//CPOL=1
 	xSPI.Init.CLKPhase=SPI_PHASE_2EDGE;  		//CPHA=1
-	xSPI.Init.NSS=SPI_NSS_SOFT;     // SOFT or HARD
-	xSPI.Init.BaudRatePrescaler=SPI_BAUDRATEPRESCALER_32;
+	//xSPI.Init.NSS=SPI_NSS_SOFT;     			// SOFT or HARD?
+	xSPI.Init.NSS=SPI_NSS_HARD_OUTPUT;      // SOFT or HARD?
+	xSPI.Init.BaudRatePrescaler=SPI_BAUDRATEPRESCALER_2; //32 or 64 or ... ?
 	xSPI.Init.FirstBit=SPI_FIRSTBIT_MSB;
 	HAL_SPI_Init(&xSPI);
 	//HAL_NVIC_EnableIRQ(SPI2_IRQn); 
@@ -27,10 +28,10 @@ void SPI_Init(void){
 
 
 uint8_t AD7799_Init(void) {
-    HAL_Delay(10);
-    uint8_t reset_cmd[4] = {0xFF, 0xFF, 0xFF, 0xFF};
-    HAL_SPI_Transmit(&xSPI, reset_cmd, 4, 100);
-    HAL_Delay(1);
+    //HAL_Delay(10);
+    //uint8_t reset_cmd[4] = {0xFF, 0xFF, 0xFF, 0xFF};
+    //HAL_SPI_Transmit(&xSPI, reset_cmd, 4, 100);
+    //HAL_Delay(1);
     uint8_t id = AD7799_ReadRegister(AD7799_REG_ID, 1);
     return id;
 }
@@ -67,6 +68,6 @@ HAL_StatusTypeDef AD7799_SetChannel(uint8_t channel, uint8_t gain) {
     return AD7799_WriteRegister(AD7799_REG_MODE, mode);
 }
 
-int32_t AD7799_ReadData(void) {
+uint32_t AD7799_ReadData(void) {
     return AD7799_ReadRegister(AD7799_REG_DATA, 3);
 }
