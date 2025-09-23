@@ -8,14 +8,10 @@ int main(void){
 	SystemClock_Config();
 	SPI_Init();
 	AD7799_CS_HIGH;
-	uint8_t ID = 0;
-	uint16_t q = 0;
-	ID = (uint8_t) AD7799_GetRegisterValue(AD7799_REG_ID,1);
-	//unsigned char data = AD7799_COMM_READ | AD7799_COMM_ADDR(AD7799_REG_ID);
+	uint8_t status = 0xFF;
+	status = AD7799_Init();
 	while(1){
-		//HAL_SPI_Transmit(&xSPI, &data, 1, 100);
-		ID = (uint8_t) AD7799_GetRegisterValue(AD7799_REG_ID,1);  
-		q++;
+		
 	}
 }
 

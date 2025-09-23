@@ -93,7 +93,8 @@ extern SPI_HandleTypeDef xSPI;
 void SPI_Init(void);
 void AD7799_SetRegisterValue(unsigned char regAddress,unsigned long regValue,unsigned char size);
 unsigned long AD7799_GetRegisterValue(unsigned char regAddress, unsigned char size);
-
+void AD7799_Reset(void);
+uint8_t AD7799_Init(void);
 
   
 

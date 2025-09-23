@@ -36,7 +36,7 @@ void AD7799_SetRegisterValue(unsigned char regAddress,
 														 unsigned long regValue, 
 														 unsigned char size) {
 	unsigned char data[4] = {0x00, 0x00, 0x00, 0x00};	
-	data[0] = AD7799_COMM_WRITE |  AD7799_COMM_ADDR(regAddress);
+	data[0] = AD7799_COMM_WRITE | AD7799_COMM_ADDR(regAddress);
 	switch (size){
 		case 1:
       data[1] = (unsigned char)regValue;
@@ -62,7 +62,7 @@ unsigned long AD7799_GetRegisterValue(unsigned char regAddress,
 	data[0] = AD7799_COMM_READ | AD7799_COMM_ADDR(regAddress);
 	AD7799_CS_LOW;  
 	HAL_SPI_Transmit(&xSPI, data, 1, 100);
-	HAL_Delay(10);
+	//HAL_Delay(10);
 	HAL_SPI_Receive(&xSPI, data, size, 100);
 	AD7799_CS_HIGH;
 	switch (size){
@@ -80,4 +80,23 @@ unsigned long AD7799_GetRegisterValue(unsigned char regAddress,
 			break;
 	}
     return receivedData;
+}
+																			
+void AD7799_Reset(void){
+	unsigned char data[4] = {0xFF, 0xFF, 0xFF, 0xFF};	
+	AD7799_CS_LOW;  
+	HAL_SPI_Transmit(&xSPI, data, 4, 100);
+	AD7799_CS_HIGH;
+}
+
+uint8_t AD7799_Init(void){
+	AD7799_Reset();
+	AD7799_SetRegisterValue(AD7799_REG_MODE,AD7799_MODE_SEL(AD7799_MODE_IDLE),2);
+	uint8_t ID = 0;
+	uint8_t status = 0;
+	ID = (uint8_t) AD7799_GetRegisterValue(AD7799_REG_ID,1);
+	status = ((ID & AD7799_ID_MASK) == AD7799_ID) ? 0 : 1;
+	return status;
+	
+	
 }
