@@ -27,7 +27,7 @@ Project File Date:  09/17/2025
 <h2>Output:</h2>
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'Target 1'
-AD7799.c(1): warning: In file included from...
+main.c(1): warning: In file included from...
 ../board project/AD7799.h(3): warning: In file included from...
 C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(287): warning: In file included from...
 C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(29): warning: In file included from...
@@ -39,72 +39,18 @@ C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4x
 C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h(4033): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
   return (uint16_t)(READ_BIT(ADCx->DR, ADC_DR_DATA));
   ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-AD7799.c(1): warning: In file included from...
-../board project/AD7799.h(3): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(287): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(29): warning: In file included from...
-./RTE/Device/STM32F407VGTx\stm32f4xx_hal_conf.h(509): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_spi.h(134): warning: padding struct 'struct __SPI_HandleTypeDef' with 2 bytes to align 'ErrorCode' [-Wpadded]
-  __IO uint32_t              ErrorCode;      /*!< SPI Error code                           */
-                             ^
-AD7799.c(14): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
-        GPIO_InitTypeDef CS_GPIO;
-                         ^
-AD7799.c(1): warning: In file included from...
-../board project/AD7799.h(3): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(287): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(29): warning: In file included from...
-./RTE/Device/STM32F407VGTx\stm32f4xx_hal_conf.h(397): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(148): warning: padding struct 'struct __DMA_HandleTypeDef' with 2 bytes to align 'Parent' [-Wpadded]
-  void                       *Parent;                                                          /*!< Parent object state                    */ 
-                              ^
-AD7799.c(39): warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
-        data[0] = AD7799_COMM_WRITE | AD7799_COMM_ADDR(regAddress);
-                ~ ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-AD7799.c(62): warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
-        data[0] = AD7799_COMM_READ | AD7799_COMM_ADDR(regAddress);
-                ~ ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-AD7799.c(70): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-                        receivedData += (data[0] << 0);
-                                     ~~  ~~~~~~~~^~~~
-AD7799.c(73): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-                        receivedData += (data[0] << 8);
-                                     ~~  ~~~~~~~~^~~~
-AD7799.c(74): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-                        receivedData += (data[1] << 0);
-                                     ~~  ~~~~~~~~^~~~
-AD7799.c(77): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-                        receivedData += (data[0] << 16);
-                                     ~~  ~~~~~~~~^~~~~
-AD7799.c(78): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-                        receivedData += (data[1] << 8);
-                                     ~~  ~~~~~~~~^~~~
-AD7799.c(79): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-                        receivedData += (data[2] << 0);
-                                     ~~  ~~~~~~~~^~~~
-AD7799.c(95): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
-        uint8_t ID = 0;
+main.c(11): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+        uint8_t status = 0xFF;
                 ^
-AD7799.c(104): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-  command &= ~AD7799_MODE_SEL(0xFF);
-          ~~ ^~~~~~~~~~~~~~~~~~~~~~
-AD7799.c(112): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-  command &= ~AD7799_CONF_GAIN(0xFF);
-          ~~ ^~~~~~~~~~~~~~~~~~~~~~~
-AD7799.c(109): warning: unused parameter 'Polarity' [-Wunused-parameter]
-void AD7799_SetGain(unsigned long Gain, unsigned long Polarity){
-                                                      ^
-AD7799.c(121): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
-    command &= ~AD7799_CONF_CHAN(0xFF);
-            ~~ ^~~~~~~~~~~~~~~~~~~~~~~
-AD7799.c(130): warning: no newline at end of file [-Wnewline-eof]
-}
- ^
-19 warnings generated.
-compiling AD7799.c...
+main.c(11): warning: variable 'status' set but not used [-Wunused-but-set-variable]
+main.c(15): warning: variable 'Temperature' set but not used [-Wunused-but-set-variable]
+        double Temperature = 0;
+               ^
+5 warnings generated.
+compiling main.c...
 linking...
-Program Size: Code=16904 RO-data=584 RW-data=12 ZI-data=1728  
-".\Objects\TemperatureSensor.axf" - 0 Error(s), 19 Warning(s).
+Program Size: Code=17144 RO-data=584 RW-data=12 ZI-data=1728  
+".\Objects\TemperatureSensor.axf" - 0 Error(s), 5 Warning(s).
 
 <h2>Software Packages used:</h2>
 

@@ -2,6 +2,14 @@
 #define AD7799
 #include "stm32f4xx.h"                 
 #include "stm32f4xx_hal.h"
+#include <math.h>
+
+/*Cfg*/
+#define VREF  2500.0
+#define ADCN 		24
+#define GAIN  1
+#define uPOLAR  0
+#define bPOLAR  1
 
 #define AD7799_CS_LOW 	HAL_GPIO_WritePin(GPIOB,AD_CS,GPIO_PIN_RESET)
 #define AD7799_CS_HIGH  HAL_GPIO_WritePin(GPIOB,AD_CS,GPIO_PIN_SET)
@@ -99,6 +107,7 @@ void AD7799_SetMode(unsigned long Mode);
 void AD7799_SetGain(unsigned long Gain, unsigned long Polarity);
 void AD7799_SetChannel(unsigned long Channel);
 uint8_t AD7799_isDataReady(void);
+double AD7799_ConvTo_mV(unsigned long Data, double Vref, unsigned long Gain, unsigned long N, unsigned long Pol);
 
 
 #endif

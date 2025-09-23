@@ -111,7 +111,7 @@ void AD7799_SetGain(unsigned long Gain, unsigned long Polarity){
   command = AD7799_GetRegisterValue(AD7799_REG_CONF,2);
   command &= ~AD7799_CONF_GAIN(0xFF);
   command |= AD7799_CONF_GAIN(Gain);
-	//command |= Polarity;
+	command |= Polarity;
   AD7799_SetRegisterValue(AD7799_REG_CONF,command,2);
 }
 
@@ -127,4 +127,15 @@ uint8_t AD7799_isDataReady(void){
 	uint8_t rdy = 0;
     rdy = (AD7799_GetRegisterValue( AD7799_REG_STAT,1) & 0x80);   
 	return rdy;
+}
+
+double AD7799_ConvTo_mV(unsigned long Data, 
+												double Vref, 
+												unsigned long Gain, 
+												unsigned long N,
+												unsigned long Pol){
+	double result = 0;
+	
+	result = (Pol)?(Data/pow(2,N-1)-1)*Vref/Gain :(Data*Vref)/(pow(2,N)*1);
+	return result;				
 }
