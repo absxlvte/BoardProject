@@ -97,6 +97,34 @@ uint8_t AD7799_Init(void){
 	ID = (uint8_t) AD7799_GetRegisterValue(AD7799_REG_ID,1);
 	status = ((ID & AD7799_ID_MASK) == AD7799_ID) ? 0 : 1;
 	return status;
-	
-	
+}
+void AD7799_SetMode(unsigned long Mode){
+	unsigned long command;
+  command = AD7799_GetRegisterValue(AD7799_REG_MODE,2);
+  command &= ~AD7799_MODE_SEL(0xFF);
+  command |= AD7799_MODE_SEL(Mode);
+  AD7799_SetRegisterValue(AD7799_REG_MODE,command,2);
+}
+
+void AD7799_SetGain(unsigned long Gain, unsigned long Polarity){
+  unsigned long command;
+  command = AD7799_GetRegisterValue(AD7799_REG_CONF,2);
+  command &= ~AD7799_CONF_GAIN(0xFF);
+  command |= AD7799_CONF_GAIN(Gain);
+	//command |= Polarity;
+  AD7799_SetRegisterValue(AD7799_REG_CONF,command,2);
+}
+
+void AD7799_SetChannel(unsigned long Channel){
+    unsigned long command;
+    command = AD7799_GetRegisterValue(AD7799_REG_CONF,2);
+    command &= ~AD7799_CONF_CHAN(0xFF);
+    command |= AD7799_CONF_CHAN(Channel);
+    AD7799_SetRegisterValue(AD7799_REG_CONF,command,2);
+}
+
+uint8_t AD7799_isDataReady(void){
+	uint8_t rdy = 0;
+    rdy = (AD7799_GetRegisterValue( AD7799_REG_STAT,1) & 0x80);   
+	return rdy;
 }
