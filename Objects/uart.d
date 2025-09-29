@@ -1,5 +1,5 @@
-./objects/main.o: main.c RTE\_Target_1\Pre_Include_Global.h \
-  ..\board\ project\AD7799.h \
+./objects/uart.o: UART.c RTE\_Target_1\Pre_Include_Global.h \
+  ..\board\ project\UART.h \
   C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h \
   C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h \
   C:\keil_pack\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h \
@@ -38,5 +38,4 @@
   C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h \
   C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h \
   C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
-  C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h ..\board\ project\UART.h
+  C:\keil_pack\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h

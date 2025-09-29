@@ -7,7 +7,7 @@
 /*Cfg*/
 #define VREF  2500.0
 #define ADCN 		24
-#define GAIN  1
+#define GAIN  2.0
 #define uPOLAR  0
 #define bPOLAR  1
 

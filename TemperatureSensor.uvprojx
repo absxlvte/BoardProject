@@ -400,26 +400,6 @@
               <FilePath>.\TMP119.h</FilePath>
             </File>
             <File>
-              <FileName>OneWire.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\OneWire.c</FilePath>
-            </File>
-            <File>
-              <FileName>OneWire.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\OneWire.h</FilePath>
-            </File>
-            <File>
-              <FileName>M1601Z.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\M1601Z.c</FilePath>
-            </File>
-            <File>
-              <FileName>M1601Z.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\M1601Z.h</FilePath>
-            </File>
-            <File>
               <FileName>DAC.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\DAC.c</FilePath>
@@ -438,6 +418,16 @@
               <FileName>AD7799.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\AD7799.h</FilePath>
+            </File>
+            <File>
+              <FileName>UART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\UART.c</FilePath>
+            </File>
+            <File>
+              <FileName>UART.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\UART.h</FilePath>
             </File>
           </Files>
         </Group>

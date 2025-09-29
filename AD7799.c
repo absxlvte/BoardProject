@@ -136,6 +136,6 @@ double AD7799_ConvTo_mV(unsigned long Data,
 												unsigned long Pol){
 	double result = 0;
 	
-	result = (Pol)?(Data/pow(2,N-1)-1)*Vref/Gain :(Data*Vref)/(pow(2,N)*1);
+	result = (Pol)?(Data/pow(2,N-1)-1)*Vref/Gain :(Data*Vref)/(pow(2,N)*Gain);
 	return result;				
 }
