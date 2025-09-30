@@ -390,16 +390,6 @@
               <FilePath>.\main.c</FilePath>
             </File>
             <File>
-              <FileName>TMP119.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\TMP119.c</FilePath>
-            </File>
-            <File>
-              <FileName>TMP119.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\TMP119.h</FilePath>
-            </File>
-            <File>
               <FileName>DAC.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\DAC.c</FilePath>
@@ -428,6 +418,16 @@
               <FileName>UART.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\UART.h</FilePath>
+            </File>
+            <File>
+              <FileName>TMP119.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\TMP119.c</FilePath>
+            </File>
+            <File>
+              <FileName>TMP119.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\TMP119.h</FilePath>
             </File>
           </Files>
         </Group>
