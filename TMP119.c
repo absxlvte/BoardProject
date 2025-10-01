@@ -17,15 +17,16 @@ void initI2C(void){
   hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
   hi2c1.Init.OwnAddress2 = 0;
   hi2c1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
-  hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  //hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+	hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_ENABLE;
   HAL_I2C_Init(&hi2c1);
   
 }
 
 uint8_t readDataTMP119(uint8_t regAddr)
 {
-	uint8_t regData;
-	HAL_I2C_Mem_Read(&hi2c1, SL_ADDR, regAddr, 1, &regData, 1, 100); 
+	uint16_t regData;
+	HAL_I2C_Mem_Read(&hi2c1, SL_ADDR, regAddr, I2C_MEMADD_SIZE_8BIT, &regData, 2, 100); 
 	return regData;
 }
 
