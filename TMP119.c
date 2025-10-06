@@ -17,20 +17,23 @@ void initI2C(void){
   hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
   hi2c1.Init.OwnAddress2 = 0;
   hi2c1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
-  //hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
-	hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_ENABLE;
+  hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
   HAL_I2C_Init(&hi2c1);
   
 }
 
-uint8_t readDataTMP119(uint8_t regAddr)
+uint16_t readDataTMP119(uint8_t regAddr)
 {
-	uint16_t regData;
-	HAL_I2C_Mem_Read(&hi2c1, SL_ADDR, regAddr, I2C_MEMADD_SIZE_8BIT, &regData, 2, 100); 
-	return regData;
+	uint16_t regData = 0;
+  uint8_t data[2] = {0};
+  HAL_I2C_Mem_Read(&hi2c1, SL_ADDR, regAddr, I2C_MEMADD_SIZE_8BIT, data, 2, 100);
+  regData = (data[0] << 8) | data[1];
+   
+  return regData;
 }
 
-void writeDataTMP119(uint8_t regAddr, uint8_t regData) 
-{
-	HAL_I2C_Mem_Write(&hi2c1,SL_ADDR,regAddr,1,&regData,1,100);
+void writeDataTMP119(uint8_t regAddr, uint16_t regData) 
+{	
+	uint8_t data[2] = {regData >> 8, regData & 0xFF};
+  HAL_I2C_Mem_Write(&hi2c1, SL_ADDR, regAddr, I2C_MEMADD_SIZE_8BIT, data, 2, 100);
 }

@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\TemperatureSensor.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\TemperatureSensor.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Wed Oct  1 13:23:54 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Mon Oct  6 13:03:58 2025
 <BR><P>
 <H3>Maximum Stack Usage =        224 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -854,7 +854,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[98]"></a>initI2C</STRONG> (Thumb, 160 bytes, Stack size 40 bytes, tmp119.o(.text.initI2C))
+<P><STRONG><a name="[98]"></a>initI2C</STRONG> (Thumb, 158 bytes, Stack size 40 bytes, tmp119.o(.text.initI2C))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = initI2C &rArr; HAL_I2C_Init &rArr; HAL_RCC_GetPCLK1Freq
 </UL>
 <BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Init
@@ -877,8 +877,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[99]"></a>readDataTMP119</STRONG> (Thumb, 50 bytes, Stack size 24 bytes, tmp119.o(.text.readDataTMP119))
-<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = readDataTMP119 &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
+<P><STRONG><a name="[99]"></a>readDataTMP119</STRONG> (Thumb, 78 bytes, Stack size 32 bytes, tmp119.o(.text.readDataTMP119))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = readDataTMP119 &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_Mem_Read
 </UL>

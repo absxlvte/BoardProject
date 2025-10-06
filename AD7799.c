@@ -125,7 +125,7 @@ void AD7799_SetChannel(unsigned long Channel){
 
 uint8_t AD7799_isDataReady(void){
 	uint8_t rdy = 0;
-    rdy = (AD7799_GetRegisterValue( AD7799_REG_STAT,1) & 0x80);   
+  rdy = (AD7799_GetRegisterValue( AD7799_REG_STAT,1) & 0x80);   
 	return rdy;
 }
 
