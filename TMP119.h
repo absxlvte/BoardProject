@@ -3,8 +3,9 @@
 #include "stm32f4xx.h"                 
 #include "stm32f4xx_hal.h"
 
-#define SL_ADDR 0x48
-
+#define SL_ADDR 0x48<<1 //within datasheet
+//PB6 SCL
+//PB7 SDA
 
 #define TempResultReg 0x00
 #define ConfigReg 		0x01
