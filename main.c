@@ -12,13 +12,8 @@ int main(void){
 	UartInit();
 	initI2C();
 	
-	uint8_t data = 0xFF;
-	HAL_I2C_Master_Transmit(&hi2c1,0x90,&data,1,100);
-	
-	
-	//int16_t st = 0;
-	//st = HAL_I2C_IsDeviceReady(&hi2c1,0x12,1,HAL_MAX_DELAY) == HAL_OK ? 1 : -1;
-	//st = HAL_I2C_IsDeviceReady(&hi2c1,SL_ADDR,1,HAL_MAX_DELAY) == HAL_OK ? 1 : -1;
+	int16_t st = 0;
+	st = HAL_I2C_IsDeviceReady(&hi2c1,SL_ADDR,1,HAL_MAX_DELAY) == HAL_OK ? 1 : -1;
 	#ifdef TMP119_WORK 
 	uint16_t ID = 0;
 	//0x2117
