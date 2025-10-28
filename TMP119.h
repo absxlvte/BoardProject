@@ -3,7 +3,8 @@
 #include "stm32f4xx.h"                 
 #include "stm32f4xx_hal.h"
 
-#define SL_ADDR 0x48<<1 // HAL documentation
+//#define SL_ADDR 0x48<<1 // HAL documentation
+#define SL_ADDR 0b10010000 // HAL documentation
 //PB6 SCL
 //PB7 SDA
 

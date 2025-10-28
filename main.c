@@ -4,7 +4,7 @@
 void SystemClock_Config(void);
 void SysTick_Handler(void);
 //avaliable defines: LMT70_WORK,TMP119_WORK
-//#define TMP119_WORK
+#define LMT70_WORK
 int main(void){
 	HAL_Init();
 	SystemClock_Config();
@@ -12,10 +12,12 @@ int main(void){
 	UartInit();
 	initI2C();
 	
-	int16_t st = 0;
-	st = HAL_I2C_IsDeviceReady(&hi2c1,SL_ADDR,1,HAL_MAX_DELAY) == HAL_OK ? 1 : -1;
+	//int16_t st = 0;
+	//st = HAL_I2C_IsDeviceReady(&hi2c1,SL_ADDR,1,HAL_MAX_DELAY) == HAL_OK ? 1 : -1;
+	
 	#ifdef TMP119_WORK 
 	uint16_t ID = 0;
+	ID = readDataTMP119(DevIDreg);
 	//0x2117
 	#endif
 	#ifdef LMT70_WORK 
@@ -35,7 +37,7 @@ int main(void){
 	#endif
 	while(1){
 		#ifdef TMP119_WORK 
-		ID = readDataTMP119(DevIDreg);
+		//ID = readDataTMP119(DevIDreg);
 		#endif
 		#ifdef LMT70_WORK
 		rdy = AD7799_isDataReady();
