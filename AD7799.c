@@ -103,6 +103,7 @@ void AD7799_SetMode(unsigned long Mode){
   command = AD7799_GetRegisterValue(AD7799_REG_MODE,2);
   command &= ~AD7799_MODE_SEL(0xFF);
   command |= AD7799_MODE_SEL(Mode);
+	command |= AD7799_MODE_RATE(0xC);
   AD7799_SetRegisterValue(AD7799_REG_MODE,command,2);
 }
 

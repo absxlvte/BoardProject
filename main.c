@@ -10,7 +10,8 @@ int main(void){
 	SystemClock_Config();
 	SPI_Init();
 	UartInit();
-	initI2C();
+	InitButton();
+	//initI2C();
 	
 	//int16_t st = 0;
 	//st = HAL_I2C_IsDeviceReady(&hi2c1,SL_ADDR,1,HAL_MAX_DELAY) == HAL_OK ? 1 : -1;
@@ -31,7 +32,7 @@ int main(void){
 	status = AD7799_Init();
 	AD7799_SetMode(AD7799_MODE_CAL_INT_ZERO);
 	HAL_Delay(10);
-	AD7799_SetMode(AD7799_MODE_CONT);
+	AD7799_SetMode(AD7799_MODE_CONT); //set 10Hz
 	AD7799_SetChannel(AD7799_CH_AIN1P_AIN1M);
 	AD7799_SetGain(AD7799_GAIN_2, AD7799_CONF_UNIPOLAR);
 	#endif
@@ -45,11 +46,10 @@ int main(void){
 			Data = AD7799_GetRegisterValue(AD7799_REG_DATA,3);
 			mvData = AD7799_ConvTo_mV(Data,VREF,GAIN,ADCN,uPOLAR);
 			Temperature = -8.451576E-06 * pow(mvData,2) - 1.769281E-01 * pow(mvData,1) + 2.043937E+02;
-			HAL_UART_Transmit(&xuart,&Data, 3, 100);
+			if (isPressed) HAL_UART_Transmit(&xuart,&Data, 3, 100);
+			}
 		}
 		#endif
-		
-	}
 }
 
 void SystemClock_Config(void){
