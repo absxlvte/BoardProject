@@ -46,7 +46,8 @@ int main(void){
 			Data = AD7799_GetRegisterValue(AD7799_REG_DATA,3);
 			mvData = AD7799_ConvTo_mV(Data,VREF,GAIN,ADCN,uPOLAR);
 			Temperature = -8.451576E-06 * pow(mvData,2) - 1.769281E-01 * pow(mvData,1) + 2.043937E+02;
-			if (isPressed) HAL_UART_Transmit(&xuart,&Data, 3, 100);
+			//if (isPressed) HAL_UART_Transmit(&xuart,&Data, 3, 100);
+			HAL_UART_Transmit(&xuart,&Data, 3, 100);
 			}
 		}
 		#endif
