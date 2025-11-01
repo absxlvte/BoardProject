@@ -4,21 +4,24 @@
 void SystemClock_Config(void);
 void SysTick_Handler(void);
 //avaliable defines: LMT70_WORK,TMP119_WORK
-#define LMT70_WORK
+#define TMP119_WORK
 int main(void){
 	HAL_Init();
 	SystemClock_Config();
 	SPI_Init();
 	UartInit();
 	InitButton();
-	//initI2C();
+	initI2C();
 	
 	//int16_t st = 0;
 	//st = HAL_I2C_IsDeviceReady(&hi2c1,SL_ADDR,1,HAL_MAX_DELAY) == HAL_OK ? 1 : -1;
+	//uint8_t data[2] = {0xC0,0x00};
+	//writeDataTMP119(ConfigReg,data);
+	//HAL_I2C_Mem_Write(&hi2c1, SL_ADDR, ConfigReg, I2C_MEMADD_SIZE_8BIT, data, 2, 200);
 	
 	#ifdef TMP119_WORK 
-	uint16_t ID = 0;
-	ID = readDataTMP119(DevIDreg);
+	//uint16_t ID = 0;
+	//ID = readDataTMP119(DevIDreg);
 	//0x2117
 	#endif
 	#ifdef LMT70_WORK 
@@ -49,8 +52,8 @@ int main(void){
 			//if (isPressed) HAL_UART_Transmit(&xuart,&Data, 3, 100);
 			HAL_UART_Transmit(&xuart,&Data, 3, 100);
 			}
-		}
 		#endif
+		}
 }
 
 void SystemClock_Config(void){
