@@ -3,10 +3,10 @@
 #include "stm32f4xx.h"                 
 #include "stm32f4xx_hal.h"
 
-//#define SL_ADDR 0x48<<1 // HAL documentation
+#define SL_ADDR 0x48<<1 // HAL documentation
 //#define SL_ADDR 0x48
 
-#define SL_ADDR 0b10010000 // HAL documentation
+//#define SL_ADDR 0b10010000 // HAL documentation
 //PB6 SCL
 //PB7 SDA
 
@@ -26,5 +26,5 @@ extern I2C_HandleTypeDef hi2c1;
 void initI2C(void);
 uint16_t readDataTMP119(uint8_t regAddr);
 void writeDataTMP119(uint8_t regAddr, uint16_t regData);
-
+int8_t I2C_Scan (void);
 #endif

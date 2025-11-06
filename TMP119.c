@@ -37,3 +37,15 @@ void writeDataTMP119(uint8_t regAddr, uint16_t regData)
 	uint8_t data[2] = {regData >> 8, regData & 0xFF};
   HAL_I2C_Mem_Write(&hi2c1, SL_ADDR, regAddr, I2C_MEMADD_SIZE_8BIT, data, 2, 100);
 }
+
+int8_t I2C_Scan (void)
+{
+  HAL_StatusTypeDef res;                          
+	for(uint16_t i = 0; i < 128; i++){
+		res = HAL_I2C_IsDeviceReady(&hi2c1, i << 1, 1, HAL_MAX_DELAY);                   
+    if(res == HAL_OK){
+			return i;
+		}
+	}
+	return -1;
+}

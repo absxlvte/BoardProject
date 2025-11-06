@@ -4,7 +4,12 @@
 void SystemClock_Config(void);
 void SysTick_Handler(void);
 //avaliable defines: LMT70_WORK,TMP119_WORK
-#define TMP119_WORK
+#define LMT70_WORK
+struct sendData{
+	uint32_t time;
+	unsigned long z;
+}typedef sendData;
+
 int main(void){
 	HAL_Init();
 	SystemClock_Config();
@@ -18,6 +23,11 @@ int main(void){
 	//uint8_t data[2] = {0xC0,0x00};
 	//writeDataTMP119(ConfigReg,data);
 	//HAL_I2C_Mem_Write(&hi2c1, SL_ADDR, ConfigReg, I2C_MEMADD_SIZE_8BIT, data, 2, 200);
+	//uint8_t regData = 0;
+	//uint8_t regAddress = DevIDreg;
+	//HAL_I2C_Master_Transmit(&hi2c1, (0x48 << 1), &regAddress, 1,  10);
+	//HAL_I2C_Master_Receive(&hi2c1, (0x48 << 1), &regData, 1,  10);
+	//int8_t addr = I2C_Scan();
 	
 	#ifdef TMP119_WORK 
 	//uint16_t ID = 0;
@@ -30,7 +40,8 @@ int main(void){
 	unsigned long Data = 0;
 	double mvData = 0;
 	double Temperature = 0;
-	
+	uint32_t time = 0;
+	sendData tuple = {};
 	AD7799_CS_HIGH;
 	status = AD7799_Init();
 	AD7799_SetMode(AD7799_MODE_CAL_INT_ZERO);
@@ -49,8 +60,11 @@ int main(void){
 			Data = AD7799_GetRegisterValue(AD7799_REG_DATA,3);
 			mvData = AD7799_ConvTo_mV(Data,VREF,GAIN,ADCN,uPOLAR);
 			Temperature = -8.451576E-06 * pow(mvData,2) - 1.769281E-01 * pow(mvData,1) + 2.043937E+02;
+			tuple.time = HAL_GetTick();
+			tuple.z = Data;
 			//if (isPressed) HAL_UART_Transmit(&xuart,&Data, 3, 100);
-			HAL_UART_Transmit(&xuart,&Data, 3, 100);
+			//HAL_UART_Transmit(&xuart,&Data, 3, 100);
+			HAL_UART_Transmit(&xuart,&tuple, 8, 100);
 			}
 		#endif
 		}

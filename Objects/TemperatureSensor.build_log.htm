@@ -27,7 +27,7 @@ Project File Date:  09/30/2025
 <h2>Output:</h2>
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'Target 1'
-main.c(1): warning: In file included from...
+AD7799.c(1): warning: In file included from...
 ../board project/AD7799.h(3): warning: In file included from...
 C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(287): warning: In file included from...
 C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(29): warning: In file included from...
@@ -39,98 +39,68 @@ C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4x
 C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h(4033): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
   return (uint16_t)(READ_BIT(ADCx->DR, ADC_DR_DATA));
   ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-main.c(2): warning: In file included from...
-../board project/UART.h(10): warning: no newline at end of file [-Wnewline-eof]
-#endif
-      ^
-main.c(3): warning: In file included from...
-../board project/TMP119.h(29): warning: no newline at end of file [-Wnewline-eof]
-#endif
-      ^
-main.c(20): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
-        HAL_I2C_Mem_Write(&hi2c1, SL_ADDR, ConfigReg, I2C_MEMADD_SIZE_8BIT, data, 2, 200);
-                                  ^
-../board project/TMP119.h(8): note: expanded from macro 'SL_ADDR'
-#define SL_ADDR 0b10010000 // HAL documentation
-                ^
-main.c(1): warning: In file included from...
+AD7799.c(1): warning: In file included from...
 ../board project/AD7799.h(3): warning: In file included from...
 C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(287): warning: In file included from...
 C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(29): warning: In file included from...
-./RTE/Device/STM32F407VGTx\stm32f4xx_hal_conf.h(469): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_i2c.h(215): warning: padding struct 'I2C_HandleTypeDef' with 1 byte to align 'ErrorCode' [-Wpadded]
-  __IO uint32_t              ErrorCode;      /*!< I2C Error code                           */
+./RTE/Device/STM32F407VGTx\stm32f4xx_hal_conf.h(509): warning: In file included from...
+C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_spi.h(134): warning: padding struct 'struct __SPI_HandleTypeDef' with 2 bytes to align 'ErrorCode' [-Wpadded]
+  __IO uint32_t              ErrorCode;      /*!< SPI Error code                           */
                              ^
-main.c(18): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
-        uint8_t data[2] = {0xC0,0x00};
-                ^
-main.c(1): warning: In file included from...
-../board project/AD7799.h(3): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(287): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(29): warning: In file included from...
-./RTE/Device/STM32F407VGTx\stm32f4xx_hal_conf.h(397): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(148): warning: padding struct 'struct __DMA_HandleTypeDef' with 2 bytes to align 'Parent' [-Wpadded]
-  void                       *Parent;                                                          /*!< Parent object state                    */ 
-                              ^
-8 warnings generated.
-compiling main.c...
-TMP119.c(1): warning: In file included from...
-../board project/TMP119.h(3): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(287): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(29): warning: In file included from...
-./RTE/Device/STM32F407VGTx\stm32f4xx_hal_conf.h(405): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_adc.h(31): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h(4018): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
-  return (uint16_t)(READ_BIT(ADCx->DR, ADC_DR_DATA));
-  ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h(4033): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
-  return (uint16_t)(READ_BIT(ADCx->DR, ADC_DR_DATA));
-  ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-TMP119.c(1): warning: In file included from...
-../board project/TMP119.h(29): warning: no newline at end of file [-Wnewline-eof]
-#endif
-      ^
-TMP119.c(1): warning: In file included from...
-../board project/TMP119.h(3): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(287): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(29): warning: In file included from...
-./RTE/Device/STM32F407VGTx\stm32f4xx_hal_conf.h(469): warning: In file included from...
-C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_i2c.h(215): warning: padding struct 'I2C_HandleTypeDef' with 1 byte to align 'ErrorCode' [-Wpadded]
-  __IO uint32_t              ErrorCode;      /*!< I2C Error code                           */
-                             ^
-TMP119.c(6): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
-        GPIO_InitTypeDef GPIO_InitStruct;
+AD7799.c(14): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+        GPIO_InitTypeDef CS_GPIO;
                          ^
-TMP119.c(1): warning: In file included from...
-../board project/TMP119.h(3): warning: In file included from...
+AD7799.c(1): warning: In file included from...
+../board project/AD7799.h(3): warning: In file included from...
 C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\stm32f4xx.h(287): warning: In file included from...
 C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal.h(29): warning: In file included from...
 ./RTE/Device/STM32F407VGTx\stm32f4xx_hal_conf.h(397): warning: In file included from...
 C:/keil_pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc\stm32f4xx_hal_dma.h(148): warning: padding struct 'struct __DMA_HandleTypeDef' with 2 bytes to align 'Parent' [-Wpadded]
   void                       *Parent;                                                          /*!< Parent object state                    */ 
                               ^
-TMP119.c(29): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
-  HAL_I2C_Mem_Read(&hi2c1, SL_ADDR, regAddr, I2C_MEMADD_SIZE_8BIT, data, 2, 100);
-                           ^
-../board project/TMP119.h(8): note: expanded from macro 'SL_ADDR'
-#define SL_ADDR 0b10010000 // HAL documentation
+AD7799.c(39): warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+        data[0] = AD7799_COMM_WRITE | AD7799_COMM_ADDR(regAddress);
+                ~ ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AD7799.c(62): warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+        data[0] = AD7799_COMM_READ | AD7799_COMM_ADDR(regAddress);
+                ~ ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AD7799.c(70): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        receivedData += (data[0] << 0);
+                                     ~~  ~~~~~~~~^~~~
+AD7799.c(73): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        receivedData += (data[0] << 8);
+                                     ~~  ~~~~~~~~^~~~
+AD7799.c(74): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        receivedData += (data[1] << 0);
+                                     ~~  ~~~~~~~~^~~~
+AD7799.c(77): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        receivedData += (data[0] << 16);
+                                     ~~  ~~~~~~~~^~~~~
+AD7799.c(78): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        receivedData += (data[1] << 8);
+                                     ~~  ~~~~~~~~^~~~
+AD7799.c(79): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                        receivedData += (data[2] << 0);
+                                     ~~  ~~~~~~~~^~~~
+AD7799.c(95): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+        uint8_t ID = 0;
                 ^
-TMP119.c(30): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
-  regData = (data[0] << 8) | data[1];
-          ~ ~~~~~~~~~~~~~~~^~~~~~~~~
-TMP119.c(38): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
-  HAL_I2C_Mem_Write(&hi2c1, SL_ADDR, regAddr, I2C_MEMADD_SIZE_8BIT, data, 2, 100);
-                            ^
-../board project/TMP119.h(8): note: expanded from macro 'SL_ADDR'
-#define SL_ADDR 0b10010000 // HAL documentation
-                ^
-TMP119.c(39): warning: no newline at end of file [-Wnewline-eof]
+AD7799.c(104): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+  command &= ~AD7799_MODE_SEL(0xFF);
+          ~~ ^~~~~~~~~~~~~~~~~~~~~~
+AD7799.c(113): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+  command &= ~AD7799_CONF_GAIN(0xFF);
+          ~~ ^~~~~~~~~~~~~~~~~~~~~~~
+AD7799.c(122): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+    command &= ~AD7799_CONF_CHAN(0xFF);
+            ~~ ^~~~~~~~~~~~~~~~~~~~~~~
+AD7799.c(142): warning: no newline at end of file [-Wnewline-eof]
 }
  ^
-10 warnings generated.
-compiling TMP119.c...
+18 warnings generated.
+compiling AD7799.c...
 linking...
-Program Size: Code=9102 RO-data=450 RW-data=12 ZI-data=1888  
+Program Size: Code=19560 RO-data=592 RW-data=12 ZI-data=1888  
 ".\Objects\TemperatureSensor.axf" - 0 Error(s), 18 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -178,21 +148,21 @@ Package Vendor: Keil
    * Component: Keil::Device:STM32Cube Framework:Classic:1.8.1
       Include file:  MDK/Templates/Inc/stm32f4xx_hal_conf.h
       Source file:   MDK/Templates/Src/stm32f4xx_hal_msp.c
-      Include file:  MDK/Templates/Inc/stm32f4xx_it.h
-      Source file:   MDK/Templates/Src/stm32f4xx_it.c
       Include file:  MDK/Templates/Inc/main.h
+      Include file:  CMSIS/Driver/Config/RTE_Device.h
+      Source file:   MDK/Templates/Src/stm32f4xx_it.c
       Source file:   MDK/Templates/Src/main.c
       Include file:  MDK/Templates_LL/Inc/main.h
-      Include file:  CMSIS/Driver/Config/RTE_Device.h
       Source file:   MDK/Templates_LL/Src/main.c
+      Include file:  MDK/Templates/Inc/stm32f4xx_it.h
 
    * Component: Keil::Device:STM32Cube HAL:ADC:1.8.1
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c
 
    * Component: Keil::Device:STM32Cube HAL:Common:1.8.1
-      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
       Include file:  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
 
    * Component: Keil::Device:STM32Cube HAL:Cortex:1.8.1
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
@@ -202,8 +172,8 @@ Package Vendor: Keil
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dac_ex.c
 
    * Component: Keil::Device:STM32Cube HAL:DMA:1.8.1
-      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
 
    * Component: Keil::Device:STM32Cube HAL:EXTI:1.8.1
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
@@ -226,8 +196,8 @@ Package Vendor: Keil
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c
 
    * Component: Keil::Device:STM32Cube HAL:TIM:1.8.1
-      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
 
    * Component: Keil::Device:STM32Cube HAL:UART:1.8.1
       Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c
@@ -235,10 +205,10 @@ Package Vendor: Keil
    * Component: Keil::Device:Startup:2.6.3
       Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
       Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s
+      Source file:   MDK/Device/Source/ARM/STM32F40xxx_41xxx_OPT.s
       Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
       Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
-      Source file:   MDK/Device/Source/ARM/STM32F40xxx_41xxx_OPT.s
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

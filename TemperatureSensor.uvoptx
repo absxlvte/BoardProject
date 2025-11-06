@@ -173,7 +173,7 @@
         <Ww>
           <count>4</count>
           <WinNumber>1</WinNumber>
-          <ItemText>isPressed,0x0A</ItemText>
+          <ItemText>tuple</ItemText>
         </Ww>
       </WatchWindow1>
       <WatchWindow2>
@@ -186,6 +186,16 @@
           <count>1</count>
           <WinNumber>2</WinNumber>
           <ItemText>st,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>2</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>regData</ItemText>
+        </Ww>
+        <Ww>
+          <count>3</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>addr,0x10</ItemText>
         </Ww>
       </WatchWindow2>
       <Tracepoint>
