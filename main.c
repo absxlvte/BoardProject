@@ -9,6 +9,10 @@ struct sendData{
 	uint32_t time;
 	unsigned long z;
 }typedef sendData;
+union package{
+	sendData data;
+	long long send;
+}typedef Pack;
 
 int main(void){
 	HAL_Init();
@@ -41,7 +45,7 @@ int main(void){
 	double mvData = 0;
 	double Temperature = 0;
 	uint32_t time = 0;
-	sendData tuple = {};
+	Pack tuple = {};
 	AD7799_CS_HIGH;
 	status = AD7799_Init();
 	AD7799_SetMode(AD7799_MODE_CAL_INT_ZERO);
@@ -60,11 +64,11 @@ int main(void){
 			Data = AD7799_GetRegisterValue(AD7799_REG_DATA,3);
 			mvData = AD7799_ConvTo_mV(Data,VREF,GAIN,ADCN,uPOLAR);
 			Temperature = -8.451576E-06 * pow(mvData,2) - 1.769281E-01 * pow(mvData,1) + 2.043937E+02;
-			tuple.time = HAL_GetTick();
-			tuple.z = Data;
+			tuple.data.time = HAL_GetTick();
+			tuple.data.z = Data;
 			//if (isPressed) HAL_UART_Transmit(&xuart,&Data, 3, 100);
-			//HAL_UART_Transmit(&xuart,&Data, 3, 100);
-			HAL_UART_Transmit(&xuart,&tuple, 8, 100);
+			HAL_UART_Transmit(&xuart,&Data, 3, 100);
+			//HAL_UART_Transmit(&xuart,&tuple.send, 8, 100);
 			}
 		#endif
 		}

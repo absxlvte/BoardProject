@@ -11,6 +11,24 @@
 #define uPOLAR  0
 #define bPOLAR  1
 
+/* Freq select
+	0x01 - 470
+	0x02 - 242
+	0x03 - 123
+	0x04 - 62
+	0x05 - 50
+	0x06 - 39
+	0x07 - 33.2
+	0x08 - 19.6
+	0x09 - 16.7
+	0x0A - 16.7
+	0x0B - 12.5
+	0x0C - 10
+	0x0D - 8.33
+	0x0E - 6.25
+	0x0F - 4.17
+*/
+
 #define AD7799_CS_LOW 	HAL_GPIO_WritePin(GPIOB,AD_CS,GPIO_PIN_RESET)
 #define AD7799_CS_HIGH  HAL_GPIO_WritePin(GPIOB,AD_CS,GPIO_PIN_SET)
 
