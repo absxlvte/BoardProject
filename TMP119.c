@@ -41,8 +41,9 @@ void writeDataTMP119(uint8_t regAddr, uint16_t regData)
 int8_t I2C_Scan (void)
 {
   HAL_StatusTypeDef res;                          
-	for(uint16_t i = 0; i < 128; i++){
-		res = HAL_I2C_IsDeviceReady(&hi2c1, i << 1, 1, HAL_MAX_DELAY);                   
+	for(uint16_t i = 1; i < 128; i++){
+		res = HAL_I2C_IsDeviceReady(&hi2c1, i << 1, 1, HAL_MAX_DELAY); 
+		//res = HAL_I2C_IsDeviceReady(&hi2c1, i, 1, HAL_MAX_DELAY); 		
     if(res == HAL_OK){
 			return i;
 		}

@@ -4,7 +4,8 @@
 void SystemClock_Config(void);
 void SysTick_Handler(void);
 //avaliable defines: LMT70_WORK,TMP119_WORK
-#define LMT70_WORK
+//#define LMT70_WORK
+#define TMP119_WORK
 struct sendData{
 	uint32_t time;
 	unsigned long z;
@@ -13,6 +14,10 @@ union package{
 	sendData data;
 	long long send;
 }typedef Pack;
+union TMP_pack{
+	uint8_t bytes[2];
+	uint16_t data;
+}typedef TMP_pack;
 
 int main(void){
 	HAL_Init();
@@ -22,8 +27,8 @@ int main(void){
 	InitButton();
 	initI2C();
 	
-	//int16_t st = 0;
-	//st = HAL_I2C_IsDeviceReady(&hi2c1,SL_ADDR,1,HAL_MAX_DELAY) == HAL_OK ? 1 : -1;
+	int16_t st = 0;
+	st = HAL_I2C_IsDeviceReady(&hi2c1,SL_ADDR,1,HAL_MAX_DELAY) == HAL_OK ? 1 : -1;
 	//uint8_t data[2] = {0xC0,0x00};
 	//writeDataTMP119(ConfigReg,data);
 	//HAL_I2C_Mem_Write(&hi2c1, SL_ADDR, ConfigReg, I2C_MEMADD_SIZE_8BIT, data, 2, 200);
@@ -34,8 +39,13 @@ int main(void){
 	//int8_t addr = I2C_Scan();
 	
 	#ifdef TMP119_WORK 
-	//uint16_t ID = 0;
-	//ID = readDataTMP119(DevIDreg);
+	uint16_t ID = 0;
+	ID = readDataTMP119(DevIDreg);
+	float f;
+	int16_t mC, C;
+	TMP_pack rec;
+	int8_t adrr = 0;
+	adrr = I2C_Scan();
 	//0x2117
 	#endif
 	#ifdef LMT70_WORK 
@@ -50,13 +60,17 @@ int main(void){
 	status = AD7799_Init();
 	AD7799_SetMode(AD7799_MODE_CAL_INT_ZERO);
 	HAL_Delay(10);
-	AD7799_SetMode(AD7799_MODE_CONT); //set 10Hz
+	AD7799_SetMode(AD7799_MODE_CONT); //set freq
 	AD7799_SetChannel(AD7799_CH_AIN1P_AIN1M);
 	AD7799_SetGain(AD7799_GAIN_2, AD7799_CONF_UNIPOLAR);
 	#endif
 	while(1){
 		#ifdef TMP119_WORK 
 		//ID = readDataTMP119(DevIDreg);
+		rec.data = readDataTMP119(TempResultReg);
+		f = ((int8_t) rec.bytes[1] << 8 | rec.bytes[0]) * 0.0078125f; 
+		//mC = ((int8_t) rec.bytes[1] << 8 | rec.bytes[0]) * 1000 >> 7; 
+		//C = ((int8_t) rec.bytes[1] << 8 | rec.bytes[0]) >> 7;
 		#endif
 		#ifdef LMT70_WORK
 		rdy = AD7799_isDataReady();
@@ -67,7 +81,7 @@ int main(void){
 			tuple.data.time = HAL_GetTick();
 			tuple.data.z = Data;
 			//if (isPressed) HAL_UART_Transmit(&xuart,&Data, 3, 100);
-			HAL_UART_Transmit(&xuart,&Data, 3, 100);
+			HAL_UART_Transmit(&xuart,&Data, 3, 1);
 			//HAL_UART_Transmit(&xuart,&tuple.send, 8, 100);
 			}
 		#endif
