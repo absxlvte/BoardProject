@@ -152,50 +152,34 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>70</LineNumber>
+          <LineNumber>77</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134228740</Address>
+          <Address>134218816</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\main.c</Filename>
+          <Filename>.\TMP119.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\TemperatureSensor\main.c\70</Expression>
+          <Expression>\\TemperatureSensor\TMP119.c\77</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>48</LineNumber>
+          <LineNumber>74</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134228728</Address>
+          <Address>134218784</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\main.c</Filename>
+          <Filename>.\TMP119.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\TemperatureSensor\main.c\48</Expression>
-        </Bp>
-        <Bp>
-          <Number>2</Number>
-          <Type>0</Type>
-          <LineNumber>47</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134228724</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\main.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\TemperatureSensor\main.c\47</Expression>
+          <Expression>\\TemperatureSensor\TMP119.c\74</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>

@@ -14,21 +14,17 @@ union package{
 	sendData data;
 	long long send;
 }typedef Pack;
-union TMP_pack{
-	uint8_t bytes[2];
-	uint16_t data;
-}typedef TMP_pack;
+
 
 int main(void){
 	HAL_Init();
 	SystemClock_Config();
 	SPI_Init();
 	UartInit();
-	InitButton();
+	//InitButton();
 	initI2C();
+	InitDR();
 	
-	int16_t st = 0;
-	st = HAL_I2C_IsDeviceReady(&hi2c1,SL_ADDR,1,HAL_MAX_DELAY) == HAL_OK ? 1 : -1;
 	//uint8_t data[2] = {0xC0,0x00};
 	//writeDataTMP119(ConfigReg,data);
 	//HAL_I2C_Mem_Write(&hi2c1, SL_ADDR, ConfigReg, I2C_MEMADD_SIZE_8BIT, data, 2, 200);
@@ -39,11 +35,13 @@ int main(void){
 	//int8_t addr = I2C_Scan();
 	
 	#ifdef TMP119_WORK 
+	TMP119_Init(modeCC,convCycle6,avg8);
+	int16_t st = 0;
+	st = HAL_I2C_IsDeviceReady(&hi2c1,SL_ADDR,1,HAL_MAX_DELAY) == HAL_OK ? 1 : -1;
 	uint16_t ID = 0;
 	ID = readDataTMP119(DevIDreg);
-	float f;
 	int16_t mC, C;
-	TMP_pack rec;
+	
 	int8_t adrr = 0;
 	adrr = I2C_Scan();
 	//0x2117
@@ -67,10 +65,7 @@ int main(void){
 	while(1){
 		#ifdef TMP119_WORK 
 		//ID = readDataTMP119(DevIDreg);
-		rec.data = readDataTMP119(TempResultReg);
-		f = ((int8_t) rec.bytes[1] << 8 | rec.bytes[0]) * 0.0078125f; 
-		//mC = ((int8_t) rec.bytes[1] << 8 | rec.bytes[0]) * 1000 >> 7; 
-		//C = ((int8_t) rec.bytes[1] << 8 | rec.bytes[0]) >> 7;
+		
 		#endif
 		#ifdef LMT70_WORK
 		rdy = AD7799_isDataReady();

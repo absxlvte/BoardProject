@@ -38,21 +38,21 @@ void UartInit(void){
 	xuart.Init.Mode=UART_MODE_TX_RX;
 	HAL_UART_Init(&xuart);
 }
-void InitButton(void){
-	GPIO_InitTypeDef Button;
-	__HAL_RCC_GPIOA_CLK_ENABLE();
-	Button.Pin=GPIO_PIN_0;
-	Button.Mode=GPIO_MODE_IT_RISING;
-	Button.Pull=GPIO_PULLDOWN;
-	Button.Speed=GPIO_SPEED_FREQ_LOW;
-	HAL_GPIO_Init(GPIOA, &Button);
-	HAL_NVIC_EnableIRQ(EXTI0_IRQn);
-}
-void EXTI0_IRQHandler(void){
-	__HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_0);
-	  uint32_t now = HAL_GetTick();
-        if (now - last_press_time > 150){
-            last_press_time = now;
-						isPressed = isPressed == 0 ? 1 : 0;
-				}
-}
+//void InitButton(void){
+//	GPIO_InitTypeDef Button;
+//	__HAL_RCC_GPIOA_CLK_ENABLE();
+//	Button.Pin=GPIO_PIN_0;
+//	Button.Mode=GPIO_MODE_IT_RISING;
+//	Button.Pull=GPIO_PULLDOWN;
+//	Button.Speed=GPIO_SPEED_FREQ_LOW;
+//	HAL_GPIO_Init(GPIOA, &Button);
+//	HAL_NVIC_EnableIRQ(EXTI0_IRQn);
+//}
+//void EXTI0_IRQHandler(void){
+//	__HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_0);
+//	  uint32_t now = HAL_GetTick();
+//        if (now - last_press_time > 150){
+//            last_press_time = now;
+//						isPressed = isPressed == 0 ? 1 : 0;
+//				}
+//}

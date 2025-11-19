@@ -1,5 +1,7 @@
 #include "TMP119.h"
 I2C_HandleTypeDef hi2c1;
+TMP_pack rec;
+float f;
 void initI2C(void){
 	__HAL_RCC_I2C1_CLK_ENABLE();
 	__HAL_RCC_GPIOB_CLK_ENABLE();
@@ -42,11 +44,37 @@ int8_t I2C_Scan (void)
 {
   HAL_StatusTypeDef res;                          
 	for(uint16_t i = 1; i < 128; i++){
-		res = HAL_I2C_IsDeviceReady(&hi2c1, i << 1, 1, HAL_MAX_DELAY); 
-		//res = HAL_I2C_IsDeviceReady(&hi2c1, i, 1, HAL_MAX_DELAY); 		
+		res = HAL_I2C_IsDeviceReady(&hi2c1, i << 1, 1, HAL_MAX_DELAY);  		
     if(res == HAL_OK){
 			return i;
 		}
 	}
 	return -1;
+}
+
+void TMP119_Init(uint8_t mode, uint8_t conv_cycle, uint8_t avg){
+	uint16_t params = 0;
+	params |= mode << 10;
+	params |= conv_cycle << 7;
+	params |= avg << 5;
+	params |= 1 << 2;
+	writeDataTMP119(ConfigReg,params);
+}
+
+void InitDR(void){
+	GPIO_InitTypeDef Button;
+	__HAL_RCC_GPIOB_CLK_ENABLE();
+	Button.Pin=GPIO_PIN_0;
+	Button.Mode=GPIO_MODE_IT_FALLING;
+	Button.Pull=GPIO_PULLDOWN;
+	Button.Speed=GPIO_SPEED_FREQ_LOW;
+	HAL_GPIO_Init(GPIOE, &Button);
+	HAL_NVIC_EnableIRQ(EXTI0_IRQn);
+}
+void EXTI0_IRQHandler(void){
+	__HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_0);
+	rec.data = readDataTMP119(TempResultReg);
+	f = ((int8_t) rec.bytes[1] << 8 | rec.bytes[0]) * 0.0078125f; 
+	//mC = ((int8_t) rec.bytes[1] << 8 | rec.bytes[0]) * 1000 >> 7; 
+	//C = ((int8_t) rec.bytes[1] << 8 | rec.bytes[0]) >> 7;
 }

@@ -6,5 +6,5 @@ extern UART_HandleTypeDef xuart;
 extern volatile int8_t isPressed;
 void UartInit(void);
 void InitButton(void);
-void EXTI0_IRQHandler(void);
+//void EXTI0_IRQHandler(void);
 #endif
