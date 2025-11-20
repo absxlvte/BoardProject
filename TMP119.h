@@ -2,6 +2,7 @@
 #define TMP119
 #include "stm32f4xx.h"                 
 #include "stm32f4xx_hal.h"
+#include "UART.h"
 
 #define SL_ADDR 0x48<<1 // HAL documentation
 //#define SL_ADDR 0x48

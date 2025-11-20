@@ -35,7 +35,7 @@ int main(void){
 	//int8_t addr = I2C_Scan();
 	
 	#ifdef TMP119_WORK 
-	TMP119_Init(modeCC,convCycle6,avg8);
+	TMP119_Init(modeCC,convCycle1,avg0);
 	int16_t st = 0;
 	st = HAL_I2C_IsDeviceReady(&hi2c1,SL_ADDR,1,HAL_MAX_DELAY) == HAL_OK ? 1 : -1;
 	uint16_t ID = 0;

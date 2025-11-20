@@ -75,6 +75,8 @@ void EXTI0_IRQHandler(void){
 	__HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_0);
 	rec.data = readDataTMP119(TempResultReg);
 	f = ((int8_t) rec.bytes[1] << 8 | rec.bytes[0]) * 0.0078125f; 
+	HAL_UART_Transmit(&xuart,&rec.data, 2, 1);
+	
 	//mC = ((int8_t) rec.bytes[1] << 8 | rec.bytes[0]) * 1000 >> 7; 
 	//C = ((int8_t) rec.bytes[1] << 8 | rec.bytes[0]) >> 7;
 }
